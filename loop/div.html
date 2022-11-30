@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                Enter no of divs:
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="no"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                Enter height:
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="height"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                Enter width:
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="width"/>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <input type="button" value="Click" onclick="table()" >
+            </div>
+            <div class="col-md-4" id="result">
+                <!-- <h3 id="result"></h3> -->
+                
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function table(){
+            
+            var no = document.getElementById("no").value
+            var height = document.getElementById("height").value
+            var width = document.getElementById("width").value 
+            //document.getElementById("result").innerHTML="";
+            for(i=1;i<=no;i++)
+            {
+                
+                if(no%2==0){
+                    
+                    var tab = "<div style=height:"+height+"px;width:"+width+"px;background-color:red;margin:10px></div>"
+                    document.getElementById("result").innerHTML += tab;
+                }
+                else{
+                    
+                    var tab = "<div style=height:"+height+"px;width:"+width+"px;background-color:blue;margin:10px></div>" 
+                    document.getElementById("result").innerHTML += tab;
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+

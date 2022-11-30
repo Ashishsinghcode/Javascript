@@ -1,0 +1,39 @@
+.button1{
+    background-color: rgb(218,97,132);
+    border-radius: 20px;
+    color:white;
+    border-color: rgb(218,97,132);
+    padding: 7px;
+    
+}
+.menu ul li{
+    display: inline;
+    padding-left: 10px;
+    
+}
+.banner{
+    background-image: url(/Test/img/Pune-Hemp-cafe.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:600px;
+}
+.banner2{
+    background-image: url(/Test/img/Pune-Hemp-cafe.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:500px;
+}
+.icone{
+    width: 50px;
+}
+.cardalign{
+    margin-top: 102px;
+}
+.image2{
+    width:400px;
+    height:300px
+}
+.head{
+    color: rgb(218,97,132);
+    margin-top: 50px;
+}

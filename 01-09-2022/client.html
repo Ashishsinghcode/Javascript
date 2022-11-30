@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="form_error"></h1>
+    <form action="button.html" onsubmit="return hit()">
+        Name <input type="text" id="name"><br>
+        Email <input type="text" id="email"><br>
+        Password <input type="text" id="password"><br>
+        <button>Submit</button>
+    </form>    
+
+    <script>
+        function hit(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if(email == "" || password == "")
+            {
+                // alert("Incomplete form");
+                document.getElementById("form_error").innerHTML = "Incomplete form";
+                return false;
+            }else{
+                return true;
+            }
+
+        }
+    </script>
+</body>
+</html>

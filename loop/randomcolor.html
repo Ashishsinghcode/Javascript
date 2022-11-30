@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		pick a random color from array
+	</title>
+</head>
+
+
+<body id="body" >
+    
+    Enter  anything: 
+	<input type="text" onkeypress="color()">
+	<script>
+
+			function color(){
+
+                var x= Math.floor(Math.random() * 256);
+                var y= Math.floor(Math.random() * 256);
+                var z= Math.floor(Math.random() * 256);
+                var bgcolor = "rgb("+x+","+y+","+z+")";
+                
+                
+                document.getElementById("body").style.backgroundColor= bgcolor;
+            }
+            
+	</script>
+</body>
+
+</html>

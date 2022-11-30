@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="email" ><span id="emailerror"></span></td>
+                
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td><input type="text" id="contact"  ><span id="contacterror"></span></td>
+                
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" id="password"  ><span id="passworderror"></span></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" onclick="hit()" value="Submit" ></td>
+                
+            </tr>
+        </table>
+    <script>
+        function hit(){
+            
+            var patt1=/^[a-zA-Z0-9]+\@+[a-zA-Z0-9]+\.+[a-zA-Z]{2,3}$/;
+            var patt2=/^[6-9]+[0-9]{9}$/;
+            var patt3=/^[^]{6,15}$/;
+            
+            var e=document.getElementById("email").value;
+            var c=document.getElementById("contact").value;
+            var p=document.getElementById("password").value;
+            if(!patt1.test(e)){
+                document.getElementById("emailerror").innerHTML="Invalid Email"
+            }
+            else{
+                document.getElementById("emailerror").innerHTML=""
+
+            }
+           
+            if(!patt2.test(c)){
+                document.getElementById("contacterror").innerHTML="Invalid contact"
+            }else{
+                document.getElementById("contacterror").innerHTML=""
+
+            }
+            if(!patt3.test(p)){
+                document.getElementById("passworderror").innerHTML="please type between(6-15)"
+            }else{
+                document.getElementById("passworderror").innerHTML=""
+
+            }
+        }
+    </script>
+    </form>
+</body>
+</html>

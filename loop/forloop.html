@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                Enter any No:
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="no"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                Enter start no:
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="start"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                Enter end no:
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="end"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3 id="result"></h3>
+            </div>
+            <div class="col-md-4">
+                <input type="button" value="Click" onclick="table()" >
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function table(){
+            
+            var no = document.getElementById("no").value
+            var start = document.getElementById("start").value
+            var end = document.getElementById("end").value
+            for(i=start;i<=end;i++)
+            {
+                var tab=no+"*"+i+"="+no*i+"<br>"
+                document.getElementById("result").innerHTML+= tab
+            }
+        }
+    </script>
+</body>
+</html>

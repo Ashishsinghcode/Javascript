@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Regular expression</title>
+</head>
+<body>
+    <form>
+        <p id="err"></p>
+        <label>Email</label>
+        <input type="text" id="email" onblur="checkmail()"/>
+    </form>
+        <script>
+            function checkmail(){
+                var email = document.getElementById("email").value;
+                var ptt = /^[a-zA-Z0-9\.\-\_]+\@+[a-zA-Z0-9]+\.+[a-zA-Z]{2,3}$/;
+            
+                if(ptt.test(email)){
+                    document.getElementById("err").innerHTML="";
+                }
+                else{
+                    document.getElementById("err").innerHTML="Error";
+
+                }
+            }
+        </script>
+    
+</body>
+</html>

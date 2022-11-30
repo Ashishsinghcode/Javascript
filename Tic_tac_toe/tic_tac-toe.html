@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-6 mb-5">
+                <h1>Tic-Tac-Toe Game</h1>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-md-1"></div>
+            <div class="col-md-1 b1" id="b1" onclick="perform(this.id)" >
+             <input type="text" id="" value="1"  hidden>
+            </div>
+            <div class="col-md-1 b2" id="b2"  onclick="perform(this.id)">
+                <input type="text" id="" value="2" hidden>
+            </div>
+            <div class="col-md-1 b3" id="b3" onclick="perform(this.id)">
+                <input type="text" id="" value="3" hidden>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-md-1"></div>
+            <div class="col-md-1 b4" id="b4" onclick="perform(this.id)">
+                <input type="text" id="" value="4" hidden>
+            </div>
+            <div class="col-md-1 b5" id="b5" onclick="perform(this.id)">
+                <input type="text" id="" value="5" hidden>
+            </div>
+            <div class="col-md-1 b6" id="b6" onclick="perform(this.id)">
+                <input type="text" id="" value="6" hidden>
+            </div>
+        </div>
+        <div class="row">
+           <div class="col-md-1"></div>
+            <div class="col-md-1 b7" id="b7" onclick="perform(this.id)">
+                <input type="text" id="" value="7" hidden>
+            </div>
+            <div class="col-md-1 b8" id="b8" onclick="perform(this.id)">
+                <input type="text" id="" value="8" hidden>
+            </div>
+            <div class="col-md-1 b9" id="b9" onclick="perform(this.id)">
+                <input type="text" id="" value="9" hidden>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" id="value" value="player o Turn">
+                <button type="button" id="value" onclick="res()">Reset</button>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let circler= "<img class='circle' id='circle' src='img/circle.png' alt=''>";
+        let crossr= "<img class='circle' id='circle' src='img/cross.png' alt=''>";
+       function perform(id){
+        let val= document.getElementById("value").value;
+        if(val == "player o Turn"){
+            let circle= "<img class='circle' id='circle' src='img/circleb.png' alt=''>";
+             document.getElementById(id).innerHTML=circle;
+             document.getElementById(id).disabled =true;
+                document.getElementById("value").value="player x Turn"
+               
+                var b1=document.getElementById("b1").innerHTML
+                var b2=document.getElementById("b2").innerHTML
+                var b3=document.getElementById("b3").innerHTML
+                var b4=document.getElementById("b4").innerHTML
+                var b5=document.getElementById("b5").innerHTML
+                var b6=document.getElementById("b6").innerHTML
+                var b7=document.getElementById("b7").innerHTML
+                var b8=document.getElementById("b8").innerHTML
+                var b9=document.getElementById("b9").innerHTML
+                if(b1==b2 && b2==b3 && b1==b3){
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b1','b2','b3')
+                   
+                }
+                else if(b4==b5 && b5==b6 && b4==b6)
+                {
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b4','b5','b6')
+                }
+                else if(b7==b8 && b8==b9 && b7==b9)
+                {
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b7','b8','b9')
+                }
+                else if(b1==b4 && b4==b7 && b1==b7)
+                {
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b1','b4','b7')
+                }
+                else if(b2==b5 && b5==b8 && b2==b8)
+                {
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b2','b5','b8')
+                }
+                else if(b3==b6 && b6==b9 && b3==b9)
+                {
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b3','b6','b9')
+                }
+                else if(b1==b5 && b5==b9 && b1==b9)
+                {
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b1','b5','b9')
+                }
+                else if(b3==b5 && b5==b7 && b3==b7)
+                {
+                    document.getElementById('value').value="PLAYER O WINS THE GAME"
+                    winso.call('','b3','b5','b7')
+                }
+                else if(b2==b7 && b7==b9 && b2==b9)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+                else if(b1==b8 && b8==b3 && b1==b3)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+                else if(b4==b3 && b3==b9 && b4==b9)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+                else if(b1==b6 && b6==b7 && b1==b7)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+
+        }
+        else if(val == "player x Turn")
+        {
+            let cross= "<img class='circle' src='img/crossb.png' alt=''>";
+             document.getElementById(id).innerHTML=cross;
+             document.getElementById(id).disabled=true;
+             document.getElementById("value").value="player o Turn"
+             var b1=document.getElementById("b1").innerHTML
+                var b2=document.getElementById("b2").innerHTML
+                var b3=document.getElementById("b3").innerHTML
+                var b4=document.getElementById("b4").innerHTML
+                var b5=document.getElementById("b5").innerHTML
+                var b6=document.getElementById("b6").innerHTML
+                var b7=document.getElementById("b7").innerHTML
+                var b8=document.getElementById("b8").innerHTML
+                var b9=document.getElementById("b9").innerHTML
+                if(b1==b2 && b2==b3 && b1==b3){
+                    document.getElementById('value').value="PLAYER X WINS THE GAME";
+                    winsx.call('','b1','b2','b3')
+                }
+                else if(b4==b5 && b5==b6 && b4==b6)
+                {
+                    document.getElementById('value').value="PLAYER X WINS THE GAME"
+                    winsx.call('','b4','b5','b6')
+
+                }
+                else if(b7==b8 && b8==b9 && b7==b9)
+                {
+                    document.getElementById('value').value="PLAYER X WINS THE GAME"
+                    winsx.call('','b7','b8','b9')
+
+                }
+                else if(b1==b4 && b4==b7 && b1==b7)
+                {
+                    document.getElementById('value').value="PLAYER X WINS THE GAME"
+                    winsx.call('','b1','b4','b7')
+
+                }
+                else if(b2==b5 && b5==b8 && b2==b8)
+                {
+                    document.getElementById('value').value="PLAYER X WINS THE GAME"
+                    winsx.call('','b2','b5','b8')
+
+                }
+                else if(b3==b6 && b6==b9 && b3==b9)
+                {
+                    document.getElementById('value').value="PLAYER X WINS THE GAME"
+                    winsx.call('','b3','b6','b9')
+
+                }
+                else if(b1==b5 && b5==b9 && b1==b9)
+                {
+                    document.getElementById('value').value="PLAYER X WINS THE GAME"
+                    winsx.call('','b1','b5','b9')
+
+                }
+                else if(b3==b5 && b5==b7 && b3==b7)
+                {
+                    document.getElementById('value').value="PLAYER X WINS THE GAME"
+                    winsx.call('','b3','b5','b7')
+
+                }
+                else if(b2==b7 && b7==b9 && b2==b9)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+                else if(b1==b8 && b8==b3 && b1==b3)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+                else if(b4==b3 && b3==b9 && b4==b9)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+                else if(b1==b6 && b6==b7 && b1==b7)
+                {
+                    document.getElementById('value').value="MATCH DRAW"
+
+                }
+                
+        }
+
+        }
+        function res(){ 
+            location.reload(true);
+        }
+        function winso(a,b,c){
+      
+                    document.getElementById(a).innerHTML= circler
+                    document.getElementById(b).innerHTML= circler
+                    document.getElementById(c).innerHTML= circler
+        }
+        function winsx(a,b,c){
+      
+                    document.getElementById(a).innerHTML= crossr
+                    document.getElementById(b).innerHTML= crossr
+                    document.getElementById(c).innerHTML= crossr
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+<style>
+    .border1{
+        border:10px double black;
+    }
+    .border2{
+        border:10px outset aqua;
+
+    }
+    .img{
+        width: 400px;
+        height: 150px;
+    }
+    .imgmain{
+        width:600px;
+        height: 400px;
+    }
+</style>
+<script src="script.js"></script>
+</head>
+<body>
+    <div class="container ">
+        <div class="row mt-3 border1 p-5 ">
+            <div class="col-md ">
+                <div class="row">
+                    <div class="col-md-6 mx-auto"  >
+                        <img class="img-fluid imgmain border2" id="main" src="/img/1.jfif" alt="error"/>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-2 m-2 mx-auto" id="one">
+                        <img class="img-fluid img border2" onmouseover="one()" onmouseout="main()" src="/img/2.jfif" alt="error">    
+                    </div>
+                    <div class="col-md-2 m-2 mx-auto" id="two">
+                        <img class="img-fluid img border2" onmouseover="two()" onmouseout="main()" src="/img/3.jfif" alt="error">    
+
+                    </div>
+                    <div class="col-md-2 m-2 mx-auto" id="three">
+                        <img class="img-fluid img border2" onmouseover="three()" onmouseout="main()" src="/img/4.jfif" alt="error">    
+
+                    </div>
+                    <div class="col-md-2 m-2 mx-auto" id="four">
+                        <img class="img-fluid img border2" onmouseover="four()" onmouseout="main()" src="/img/5.jfif" alt="error">    
+
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
